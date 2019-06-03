@@ -24,10 +24,9 @@ jacoco {
 
 jacocoTestReport {
     afterEvaluate {
-        classDirectories = files(classDirectories.files.collect {
+        classDirectories.from = files(classDirectories.files.collect {
             fileTree(dir: it, exclude:  [
-                    'com/github/seed/RecordJson*.*',
-                    'com/github/seed/RecordMap*.*'
+                    'com/github/ExcludeMe*.*'
             ])
         })
     }
@@ -36,7 +35,7 @@ jacocoTestReport {
 jacocoTestCoverageVerification {
     dependsOn jacocoTestReport
     afterEvaluate {
-        classDirectories = files(classDirectories.files.collect {
+        classDirectories.from = files(classDirectories.files.collect {
             fileTree(dir: it, exclude:  [
                     'com/github/ExcludeMe*.*'
             ])
