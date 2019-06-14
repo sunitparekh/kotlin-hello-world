@@ -1,8 +1,5 @@
 package com.github
 
 class HelloWorld {
-
-    fun greetings(): String {
-        return "Hello World!!!"
-    }
+    fun greetings() = "Hello World!!!"
 }
