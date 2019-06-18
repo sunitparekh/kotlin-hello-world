@@ -6,7 +6,7 @@ import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 
-class HelloWorldTests : StringSpec() {
+class HelloWorldKotlinTests : StringSpec() {
 
 
     init {
